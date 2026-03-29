@@ -1,3 +1,4 @@
+/* Vista Auto-Build */
 window.Vista = (function() {
 <!DOCTYPE html>
 <html lang="en">
