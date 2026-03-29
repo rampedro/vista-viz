@@ -1,5 +1,54 @@
-/* VISTA-AUTO: v1.0.0 */
-let geoData = {}; // Stores the raw GeoJSON data
+<header>
+    <h1>GeoJSON Viewer & Editor with Dynamic Insets and Data Mapping</h1>
+</header>
+
+<main>
+    <div id="map">
+        <div id="loadingSpinner">Loading data...</div>
+        <div id="insetMap"></div>
+    </div>
+    <aside id="sidebar">
+        <div id="table"></div>
+        <div id="addPropertySection">
+            <input type="text" id="newPropertyInput" placeholder="New Property Name (e.g., 'Density')" />
+            <button onclick="addNewProperty()">Add Property</button>
+        </div>
+        <div id="mappingControls">
+            <label for="fillColorPropertySelect">Fill Color By:</label>
+            <select id="fillColorPropertySelect">
+                <option value="none">-- None --</option>
+            </select>
+
+            <label for="strokeColorPropertySelect">Stroke Color By:</label>
+            <select id="strokeColorPropertySelect">
+                <option value="none">-- None --</option>
+            </select>
+
+            <label for="strokeWeightPropertySelect">Stroke Weight By:</label>
+            <select id="strokeWeightPropertySelect">
+                <option value="none">-- None --</option>
+            </select>
+
+            <label for="lineTypePropertySelect">Line Type By:</label>
+            <select id="lineTypePropertySelect">
+                <option value="none">-- None --</option>
+                <option value="solid">Solid</option>
+                <option value="dashed">Dashed</option>
+                <option value="dotted">Dotted</option>
+            </select>
+        </div>
+    </aside>
+</main>
+
+<footer>
+    <small>Powered by Leaflet, Tabulator, and D3.js</small>
+</footer>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://unpkg.com/tabulator-tables@5.6.1/dist/js/tabulator.min.js"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+    let geoData = {}; // Stores the raw GeoJSON data
     let mainMapGeojsonLayer; // Reference to the main map's GeoJSON layer
     let insetMapGeojsonLayer; // Reference to the inset map's GeoJSON layer
     let tabulatorTable; // Reference to the Tabulator table instance
@@ -464,3 +513,5 @@ let geoData = {}; // Stores the raw GeoJSON data
             showLoadingSpinner(false);
             document.getElementById('loadingSpinner').textContent = 'Error loading data. See console.';
         });
+
+</script>
