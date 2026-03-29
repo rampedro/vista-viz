@@ -1,4 +1,4 @@
-/* VISTA-AUTO: v1.0.0 */
+/* VISTA-AUTO: v3 */
 let geoData = {}; // Stores the raw GeoJSON data
     let mainMapGeojsonLayer; // Reference to the main map's GeoJSON layer
     let insetMapGeojsonLayer; // Reference to the inset map's GeoJSON layer
